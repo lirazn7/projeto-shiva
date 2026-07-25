@@ -37,6 +37,30 @@ body {
     padding-bottom: 1.5rem;
 }
 
+/* Adicione no seu style.css */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang-select {
+    background: var(--surface);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.lang-select:focus {
+    border-color: var(--text-muted);
+}
+
 .header h1 {
     font-size: 1.5rem;
     font-weight: 600;

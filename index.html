@@ -11,26 +11,35 @@
 <body>
     <main class="container">
         <header class="header">
-            <h1>Prompt Architect</h1>
-            <p>Descreva o que você precisa. Nossa infraestrutura constrói o prompt perfeito.</p>
+            <div class="header-top">
+                <h1>Prompt Architect</h1>
+                <select id="lang-selector" class="lang-select">
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="es">🇪🇸 Español</option>
+                </select>
+            </div>
+            <p data-i18n="desc">Descreva o que você precisa. Nossa infraestrutura constrói o prompt perfeito.</p>
         </header>
 
         <div class="workspace">
             <!-- Painel de Entrada -->
             <div class="input-section">
-                <label for="context-input">Contexto e Objetivo</label>
-                <textarea id="context-input"
+                <label for="context-input" data-i18n="contextLabel">Contexto e Objetivo</label>
+                <textarea id="context-input" data-i18n="contextPlaceholder"
                     placeholder="Ex: Preciso de um post para LinkedIn sobre a importância da liderança humanizada, com tom inspirador e focando em startups de tecnologia. Quero o resultado em tópicos."></textarea>
-                <button id="generate-btn">Estruturar Prompt</button>
+                <button id="generate-btn" data-i18n="generateBtn">Estruturar Prompt</button>
             </div>
 
             <!-- Painel de Saída -->
             <div class="output-section">
                 <div class="output-header">
-                    <label>Prompt Otimizado</label>
-                    <button id="copy-btn" class="secondary-btn">Copiar Área de Transferência</button>
+                    <label data-i18n="outputLabel">Prompt Otimizado</label>
+                    <button id="copy-btn" class="secondary-btn" data-i18n="copyBtn">Copiar Área de
+                        Transferência</button>
                 </div>
-                <div id="prompt-output" class="output-box">O prompt estruturado e otimizado aparecerá aqui.</div>
+                <div id="prompt-output" class="output-box" data-i18n="outputBox">O prompt estruturado e otimizado
+                    aparecerá aqui.</div>
             </div>
         </div>
     </main>
