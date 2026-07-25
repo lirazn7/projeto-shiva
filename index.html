@@ -4,84 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PromptEngine Native — Gerador Universal de Prompts</title>
+    <title>Prompt Architect | Engenharia de Prompts</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="app-container">
-        <header>
-            <h1>⚡ PromptEngine Native</h1>
-            <p>Estruture prompts de alta performance sem complicações.</p>
+    <main class="container">
+        <header class="header">
+            <h1>Prompt Architect</h1>
+            <p>Descreva o que você precisa. Nossa infraestrutura constrói o prompt perfeito.</p>
         </header>
 
-        <main className="grid-layout">
-            <!-- PAINEL DE CONFIGURAÇÃO -->
-            <section className="card">
-                <h2>1. Configure seu Prompt</h2>
-
-                <div className="field-group">
-                    <label for="categoria">Categoria / Objetivo</label>
-                    <select id="categoria">
-                        <option value="copywriting">Copywriting & Vendas</option>
-                        <option value="coding">Desenvolvimento de Software</option>
-                        <option value="ideation">Ideação & Brainstorming</option>
-                        <option value="learning">Explicar Conceitos Complexos</option>
-                    </select>
-                </div>
-
-                <div className="field-group">
-                    <label for="persona">Persona da IA (Quem a IA deve ser?)</label>
-                    <input type="text" id="persona"
-                        placeholder="Ex: Desenvolvedor Senior React / Copywriter de resposta direta">
-                </div>
-
-                <div className="field-group">
-                    <label for="contexto">Contexto / Tarefa (Qual é a dor/projeto?)</label>
-                    <textarea id="contexto" rows="3"
-                        placeholder="Ex: Preciso criar uma landing page para um SaaS de finanças pessoais..."></textarea>
-                </div>
-
-                <div className="field-group">
-                    <label for="formato">Formato da Resposta</label>
-                    <input type="text" id="formato"
-                        placeholder="Ex: Lista de tópicos em Markdown, código formatado, tabela...">
-                </div>
-
-                <div className="field-group">
-                    <label for="apiKey">Sua API Key do Gemini (Opcional - para refinamento por IA)</label>
-                    <input type="password" id="apiKey" placeholder="Cole sua chave aqui para refinamento automático">
-                </div>
-
-                <button id="btn-gerar" className="btn btn-primary">Gerar Prompt Perfeito ✨</button>
-            </section>
-
-            <!-- PAINEL DE RESULTADO -->
-            <section className="card">
-                <div className="card-header">
-                    <h2>2. Seu Prompt Pronto</h2>
-                    <button id="btn-copiar" className="btn btn-secondary">📋 Copiar</button>
-                </div>
-
-                <div id="output-prompt" className="output-box" contenteditable="true">
-                    Preencha os campos ao lado e clique em "Gerar Prompt Perfeito" para ver o resultado aqui.
-                </div>
-
-                <div className="card-footer">
-                    <button id="btn-salvar" className="btn btn-outline">💾 Salvar nos Favoritos</button>
-                </div>
-            </section>
-        </main>
-
-        <!-- ÁREA DE FAVORITOS (LOCALSTORAGE) -->
-        <section className="card favorites-section">
-            <h2>📌 Meus Prompts Salvos (LocalStorage)</h2>
-            <div id="favorites-list" className="favorites-grid">
-                <p className="empty-msg">Nenhum prompt salvo ainda.</p>
+        <div class="workspace">
+            <!-- Painel de Entrada -->
+            <div class="input-section">
+                <label for="context-input">Contexto e Objetivo</label>
+                <textarea id="context-input"
+                    placeholder="Ex: Preciso de um post para LinkedIn sobre a importância da liderança humanizada, com tom inspirador e focando em startups de tecnologia. Quero o resultado em tópicos."></textarea>
+                <button id="generate-btn">Estruturar Prompt</button>
             </div>
-        </section>
-    </div>
 
+            <!-- Painel de Saída -->
+            <div class="output-section">
+                <div class="output-header">
+                    <label>Prompt Otimizado</label>
+                    <button id="copy-btn" class="secondary-btn">Copiar Área de Transferência</button>
+                </div>
+                <div id="prompt-output" class="output-box">O prompt estruturado e otimizado aparecerá aqui.</div>
+            </div>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 
